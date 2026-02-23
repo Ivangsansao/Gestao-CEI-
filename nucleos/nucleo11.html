@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I - Organograma</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 🔹 MENU FIXO */
+    .top-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #198754;
+      color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .btn-voltar {
+      background: white;
+      color: #198754;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-voltar:hover {
+      background: #e9ecef;
+    }
+
+    main {
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      flex: 1;
+    }
+
+    /* Container da imagem com card padronizado */
+    .imagem-container {
+      max-width: 1100px;
+      width: 100%;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      border-left: 4px solid #198754;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+    }
+
+    /* Imagem limpa e centralizada */
+    #organograma-img {
+      max-width: 100%;
+      max-height: 1100px;
+      width: auto;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Espaçamento de 1cm (aproximadamente 38px) entre a imagem e o rodapé */
+    .espaco-rodape {
+      height: 38px;
+      min-height: 38px;
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #198754;
+      color: white;
+      font-size: 0.9rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .imagem-container {
+        padding: 20px;
+      }
+      
+      .espaco-rodape {
+        height: 30px;
+        min-height: 30px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .imagem-container {
+        padding: 15px;
+      }
+      
+      .espaco-rodape {
+        height: 25px;
+        min-height: 25px;
+      }
+    }
+  </style>
+
+  <script>
+    function voltarPaginaPrincipal() {
+      if (window.opener) {
+        window.opener.location.href = "../index.html";
+        window.close();
+      } else {
+        window.location.href = "../index.html";
+      }
+    }
+
+    // Função para mostrar erro da imagem
+    function mostrarErro() {
+      console.log('Imagem "organograma.png" não encontrada.');
+      alert('Imagem "organograma.png" não encontrada.\nPor favor, adicione a imagem na pasta raiz do projeto.');
+    }
+    
+    // Verifica quando a imagem carrega
+    document.addEventListener('DOMContentLoaded', function() {
+      const img = document.getElementById('organograma-img');
+      
+      img.onload = function() {
+        console.log('Imagem carregada com sucesso:', img.naturalWidth + '×' + img.naturalHeight + 'px');
+      };
+      
+      img.onerror = function() {
+        mostrarErro();
+      };
+    });
+  </script>
+</head>
+<body>
+
+  <!-- 🔹 MENU FIXO -->
+  <div class="top-menu">
+    <span>I - Organograma</span>
+    <button class="btn-voltar" onclick="voltarPaginaPrincipal()">Voltar</button>
+  </div>
+
+  <main>
+    <!-- Container com card padronizado para a imagem -->
+    <div class="imagem-container">
+      <img 
+        id="organograma-img" 
+        src="../organograma.png" 
+        alt="Organograma da organização"
+      >
+    </div>
+    
+    <!-- Espaçamento de 1cm antes do rodapé -->
+    <div class="espaco-rodape"></div>
+  </main>
+
+  <footer>
+    Secretaria Municipal da Saúde – Joinville
+  </footer>
+
+</body>
+</html>

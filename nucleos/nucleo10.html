@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IV - Atribuições do Centro de Educação e Inovação em Saúde</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    /* 🔹 MENU FIXO */
+    .top-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #198754;
+      color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .btn-voltar {
+      background: white;
+      color: #198754;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-voltar:hover {
+      background: #e9ecef;
+    }
+
+    main {
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 180px);
+      padding: 20px;
+    }
+
+    .nucleo-info {
+      max-width: 1000px;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      border-left: 4px solid #198754;
+      text-align: left;
+    }
+
+    .nucleo-info p {
+      margin: 20px 0;
+      font-size: 22px;
+      line-height: 1.8;
+      color: #2c3e50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #198754;
+      color: white;
+      font-size: 0.9rem;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .nucleo-info {
+        padding: 25px;
+      }
+      
+      .nucleo-info p {
+        font-size: 20px;
+        line-height: 1.6;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .nucleo-info p {
+        font-size: 18px;
+      }
+    }
+  </style>
+
+  <script>
+    function voltarPaginaPrincipal() {
+      if (window.opener) {
+        window.opener.location.href = "../index.html";
+        window.close();
+      } else {
+        window.location.href = "../index.html";
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- 🔹 MENU FIXO -->
+  <div class="top-menu">
+    <span>IV - Atribuições do Centro de Educação e Inovação em Saúde</span>
+    <button class="btn-voltar" onclick="voltarPaginaPrincipal()">Voltar</button>
+  </div>
+
+  <main>
+    <section class="nucleo-info">
+      <p>Desenvolver e oferecer programas de educação permanente para os profissionais de saúde, com o objetivo de melhorar suas habilidades e conhecimentos em diversas áreas.</p>
+
+      <p>Criar e coordenar iniciativas de inovação em saúde, visando o desenvolvimento de novas práticas, tecnologias e estratégias para o aprimoramento do atendimento médico, hospitalar e de saúde pública.</p>
+
+      <p>Realizar pesquisas científicas e estudos voltados para a melhoria dos serviços de saúde e a implementação de práticas baseadas em evidências.</p>
+
+      <p>Oferecer formação especializada para profissionais de saúde, desde cursos de capacitação até programas de pós-graduação, sempre com foco em práticas mais eficazes e humanizadas.</p>
+
+      <p>Promover parcerias e colaborações com outras instituições educacionais, hospitais, universidades e centros de pesquisa, visando a troca de conhecimento e a ampliação de recursos para o desenvolvimento de soluções inovadoras.</p>
+
+      <p>Fomentar a integração entre teoria e prática, oferecendo aos profissionais da saúde oportunidades de aplicar o que aprendem em cenários reais de atendimento à população.</p>
+
+      <p>Apoiar a gestão pública de saúde por meio da qualificação dos profissionais envolvidos, garantindo um atendimento mais eficaz e de qualidade à população.</p>
+    </section>
+  </main>
+
+  <footer>
+    Secretaria Municipal da Saúde – Joinville
+  </footer>
+
+</body>
+</html>

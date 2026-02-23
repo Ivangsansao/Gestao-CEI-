@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VII - Núcleo de Apoio aos Setores do Ceis</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    /* 🔹 MENU FIXO */
+    .top-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #198754;
+      color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .btn-voltar {
+      background: white;
+      color: #198754;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-voltar:hover {
+      background: #e9ecef;
+    }
+
+    main {
+      margin-top: 70px;
+    }
+
+    .layout-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+
+    .linha {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .quadro-cargo {
+      background-color: #ffffff;
+      border-left: 4px solid #198754;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .quadro-link {
+      background-color: #e3f2fd;
+      border-left: 4px solid #0dcaf0;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+
+    .quadro-titulo {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #2c3e50;
+      font-size: 1.1em;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 8px;
+    }
+
+    .quadro-detalhes {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .quadro-detalhes li {
+      padding: 4px 0;
+      color: #555;
+    }
+
+    .relatorio-link {
+      background-color: #0dcaf0;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .relatorio-link:hover {
+      background-color: #0bacd0;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #198754;
+      color: white;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .linha {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    function voltarPaginaPrincipal() {
+      if (window.opener) {
+        window.opener.location.href = "../index.html";
+        window.close();
+      } else {
+        window.location.href = "../index.html";
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- 🔹 MENU FIXO -->
+  <div class="top-menu">
+    <span>VII - Núcleo de Apoio aos Setores do Ceis</span>
+    <button class="btn-voltar" onclick="voltarPaginaPrincipal()">Voltar</button>
+  </div>
+
+  <main>
+    <div class="layout-container">
+
+      <!-- LINHA 1 -->
+      <div class="linha">
+        <div class="quadro-cargo">
+          <div class="quadro-titulo">1. Área de Informática</div>
+          <ul class="quadro-detalhes">
+            <li><strong>Nome:</strong> Evandro Borges e Silva</li>
+            <li><strong>Ramal:</strong> 6660</li>
+            <li><strong>Email:</strong> ses.uqd.aps@joinville.sc.gov.br</li>
+          </ul>
+        </div>
+
+        <div class="quadro-link">
+          <div class="quadro-titulo">📊 Relatório</div>
+          <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
+             target="_blank"
+             class="relatorio-link">
+            Acessar
+          </a>
+        </div>
+      </div>
+
+      <!-- LINHA 2 -->
+      <div class="linha">
+        <div class="quadro-cargo">
+          <div class="quadro-titulo">2. Agente Administrativo</div>
+          <ul class="quadro-detalhes">
+            <li><strong>Nome:</strong> Catia Regina Hodecker</li>
+            <li><strong>Ramal:</strong> 6660</li>
+            <li><strong>Email:</strong> cses.uqd.aps@joinville.sc.gov.br</li>
+          </ul>
+        </div>
+
+        <div class="quadro-link">
+          <div class="quadro-titulo">📊 Relatório</div>
+          <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
+             target="_blank"
+             class="relatorio-link">
+            Acessar
+          </a>
+        </div>
+      </div>
+
+      <!-- LINHA 3 -->
+      <div class="linha">
+        <div class="quadro-cargo">
+          <div class="quadro-titulo">3. Agente de Serviços Gerais</div>
+          <ul class="quadro-detalhes">
+            <li><strong>Nome:</strong> Adriana Machado Lessa</li>
+            <li><strong>Ramal:</strong> 6660</li>
+            <li><strong>Email:</strong> ses.uqd.aps@joinville.sc.gov.br</li>
+          </ul>
+        </div>
+
+        <div class="quadro-link">
+          <div class="quadro-titulo">📊 Relatório</div>
+          <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
+             target="_blank"
+             class="relatorio-link">
+            Acessar
+          </a>
+        </div>
+      </div>
+
+      <!-- LINHA 4 -->
+      <div class="linha">
+        <div class="quadro-cargo">
+          <div class="quadro-titulo">4. Estagiário Nível Superior</div>
+          <ul class="quadro-detalhes">
+            <li><strong>Nome:</strong> Ivan Geovane Sansão</li>
+            <li><strong>Ramal:</strong> 6660</li>
+            <li><strong>Email:</strong> ses.uqd.aps@joinville.sc.gov.br</li>
+          </ul>
+        </div>
+
+        <div class="quadro-link">
+          <div class="quadro-titulo">📊 Relatório</div>
+          <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
+             target="_blank"
+             class="relatorio-link">
+            Acessar
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    Secretaria Municipal da Saúde – Joinville
+  </footer>
+
+</body>
+</html>

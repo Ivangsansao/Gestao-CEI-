@@ -1,0 +1,532 @@
+/* ===== ESTILOS GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #003866, #002244);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 20px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-link {
+    flex: 0 0 auto;
+}
+
+.image-link img {
+    max-width: 250px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s;
+}
+
+.image-link img:hover {
+    transform: scale(1.05);
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0 20px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== MENU DROPDOWN ===== */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+}
+
+.dropbtn {
+    background-color: #ffc107;
+    color: #003866;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: #ffca2c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 110%;
+    background-color: white;
+    min-width: 350px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: #003866;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #003866;
+    color: white;
+    padding-left: 25px;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ===== ESPAÇAMENTOS ===== */
+.espaco-1-linhas,
+.espaco-2-linhas,
+.espaco-3-linhas,
+.espaco-4-linhas,
+.espaco-5-linhas,
+.espaco-antes-frase,
+.espaco-0-linhas {
+    width: 100%;
+}
+
+.espaco-1-linhas { height: 10px; }
+.espaco-2-linhas { height: 20px; }
+.espaco-3-linhas { height: 30px; }
+.espaco-4-linhas { height: 40px; }
+.espaco-5-linhas { height: 50px; }
+.espaco-antes-frase { height: 50px; }
+.espaco-0-linhas { height: 20px; }
+
+/* ===== CONTAINERS DOS QUADROS ===== */
+.meus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px 0;
+}
+
+/* ===== ESTILO DOS QUADROS ===== */
+.meus-container .meu {
+    background: linear-gradient(135deg, #1e3d59, #003866);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    min-width: 250px;
+    flex: 1;
+    max-width: 280px;
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.meus-container .meu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.meus-container .meu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #2c5282, #004a8f);
+}
+
+/* Estilo específico para quadros com imagem */
+.meus-container.sete-quadros .meu a {
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ===== OVERLAY AMARELO ===== */
+.hover-overlay-amarelo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 193, 7, 0.95);
+    color: #003866;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    z-index: 20;
+    pointer-events: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.meu:hover .hover-overlay-amarelo {
+    opacity: 1;
+}
+
+/* Remover os overlays específicos antigos */
+.hover-overlay-gestao,
+.hover-overlay-educacao-permanente,
+.hover-overlay-formacao-saude,
+.hover-overlay-uniservir,
+.hover-overlay-apoio-setores {
+    display: none;
+}
+
+/* ===== IMAGENS DOS QUADROS ===== */
+.imagem-quadro {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Ajustes específicos para imagens maiores */
+.imagem-quadro[alt="UNISERVIR"],
+.imagem-quadro[alt="Gestão do Trabalho"],
+.imagem-quadro[alt="Educação Permanente"],
+.imagem-quadro[alt="Formação em Saúde"],
+.imagem-quadro[alt="Residências em Saúde"],
+.imagem-quadro[alt="VII - Núcleo de Apoio aos Setores do Ceis"] {
+    width: 80px;
+    height: 80px;
+}
+
+.container-imagem-quadro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85px;
+    position: relative;
+}
+
+.texto-quadro {
+    display: block;
+    margin-top: 0;
+    line-height: 1.2;
+    font-size: 15px;
+    color: white;
+}
+
+/* Ajuste específico para o quadro III (frase longa) */
+.meus-container.sete-quadros .meu:nth-child(3) a {
+    gap: 8px;
+}
+
+.meus-container.sete-quadros .meu:nth-child(3) .texto-quadro {
+    font-size: 14px;
+    line-height: 1.2;
+    max-width: 95%;
+    word-break: break-word;
+}
+
+/* ===== TARJA AZUL (FRASE) ===== */
+.tarja {
+    background: #003866;
+    color: white;
+    text-align: center;
+    padding: 25px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== RODAPÉ (INFO-TARJA) ===== */
+.info-tarja {
+    background: #003866;
+    color: white;
+    padding: 30px 40px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.info-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-direction: row;
+}
+
+.info-imagem {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-imagem img {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+.info-texto {
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.info-texto strong {
+    color: #ffc107;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+    
+    .image-link img {
+        max-width: 200px;
+    }
+    
+    header h1 {
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    
+    .dropdown {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .dropbtn {
+        width: auto;
+        display: inline-block;
+    }
+    
+    .dropdown-content {
+        min-width: 280px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+    
+    .meus-container {
+        gap: 15px;
+        padding: 15px 10px;
+    }
+    
+    .meus-container .meu {
+        min-width: 200px;
+        max-width: 250px;
+        min-height: 130px;
+        padding: 25px 15px;
+    }
+    
+    .tarja {
+        padding: 20px 25px;
+        font-size: 18px;
+        margin: 0 auto 30px auto;
+        max-width: 95%;
+    }
+    
+    .espaco-antes-frase {
+        height: 30px;
+    }
+    
+    .info-tarja {
+        padding: 20px 25px;
+        margin-top: 30px;
+    }
+    
+    .info-conteudo {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .info-texto {
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .info-imagem img {
+        max-width: 180px;
+    }
+    
+    .imagem-quadro {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .imagem-quadro[alt="UNISERVIR"],
+    .imagem-quadro[alt="Gestão do Trabalho"],
+    .imagem-quadro[alt="Educação Permanente"],
+    .imagem-quadro[alt="Formação em Saúde"],
+    .imagem-quadro[alt="Residências em Saúde"],
+    .imagem-quadro[alt="VII - Núcleo de Apoio aos Setores do Ceis"] {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .container-imagem-quadro {
+        min-height: 70px;
+    }
+    
+    .hover-overlay-amarelo {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .texto-quadro {
+        font-size: 14px;
+    }
+    
+    .meus-container.sete-quadros .meu:nth-child(3) .texto-quadro {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+    
+    .image-link img {
+        max-width: 160px;
+    }
+    
+    .dropdown {
+        margin: 10px auto 0;
+    }
+    
+    .dropdown-content {
+        width: 90%;
+        min-width: auto;
+    }
+    
+    .meus-container .meu {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 120px;
+        padding: 20px 10px;
+    }
+    
+    .tarja {
+        padding: 15px 20px;
+        font-size: 16px;
+        margin: 0 auto 20px auto;
+    }
+    
+    .espaco-antes-frase {
+        height: 20px;
+    }
+    
+    .info-tarja {
+        padding: 15px 20px;
+        margin-top: 20px;
+    }
+    
+    .info-texto {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    .info-imagem img {
+        max-width: 150px;
+    }
+    
+    .imagem-quadro {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .imagem-quadro[alt="UNISERVIR"],
+    .imagem-quadro[alt="Gestão do Trabalho"],
+    .imagem-quadro[alt="Educação Permanente"],
+    .imagem-quadro[alt="Formação em Saúde"],
+    .imagem-quadro[alt="Residências em Saúde"],
+    .imagem-quadro[alt="VII - Núcleo de Apoio aos Setores do Ceis"] {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .container-imagem-quadro {
+        min-height: 65px;
+    }
+    
+    .hover-overlay-amarelo {
+        font-size: 12px;
+        padding: 8px;
+    }
+    
+    .texto-quadro {
+        font-size: 13px;
+    }
+    
+    .meus-container.sete-quadros .meu:nth-child(3) .texto-quadro {
+        font-size: 11px;
+    }
+}

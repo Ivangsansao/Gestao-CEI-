@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>II - Núcleo de Educação Permanente em Saúde</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    /* 🔹 MENU FIXO */
+    .top-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #198754;
+      color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .btn-voltar {
+      background: white;
+      color: #198754;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-voltar:hover {
+      background: #e9ecef;
+    }
+
+    main {
+      margin-top: 70px;
+    }
+
+    .layout-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+
+    .linha {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .quadro-item {
+      background-color: #ffffff;
+      border-left: 4px solid #198754;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .titulo-texto {
+      color: #2c3e50;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 8px;
+    }
+
+    .quadro-detalhes {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .quadro-detalhes li {
+      padding: 4px 0;
+      color: #555;
+    }
+
+    .quadro-relatorio {
+      background-color: #e3f2fd;
+      border-left: 4px solid #0dcaf0;
+    }
+
+    .relatorio-link {
+      display: inline-block;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 10px;
+      background-color: #0dcaf0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #198754;
+      color: white;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .linha {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    function voltarPaginaPrincipal() {
+      if (window.opener) {
+        window.opener.location.href = "../index.html";
+        window.close();
+      } else {
+        window.location.href = "../index.html";
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- 🔹 MENU FIXO -->
+  <div class="top-menu">
+    <span>II - Núcleo de Educação Permanente em Saúde</span>
+    <button class="btn-voltar" onclick="voltarPaginaPrincipal()">Voltar</button>
+  </div>
+
+  <main>
+    <div class="layout-container">
+
+      <!-- 🔹 LINHA 1 -->
+      <div class="linha">
+        <div class="quadro-item">
+          <div class="titulo-texto">1. Técnico de nível superior</div>
+          <ul class="quadro-detalhes">
+            <li><strong>Nome:</strong> Vanessa Cristina Melo Randig</li>
+            <li><strong>Ramal:</strong> 6664</li>
+            <li><strong>Email:</strong> ses.uqd.ceis@joinville.sc.gov.br</li>
+          </ul>
+        </div>
+
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Relatório Online</div>
+          <p>Acesse o relatório completo com dados atualizados sobre a educação permanente em saúde.</p>
+          <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
+             target="_blank"
+             class="relatorio-link">
+            Acessar Relatório
+          </a>
+        </div>
+      </div>
+
+      <!-- 🔹 LINHA 2 -->
+      <div class="linha">
+        <div class="quadro-item">
+          <div class="titulo-texto">2. Técnico de nível superior</div>
+          <ul class="quadro-detalhes">
+            <li><strong>Nome:</strong> Viviane Alano da Silva Ruzza</li>
+            <li><strong>Ramal:</strong> 6664</li>
+            <li><strong>Email:</strong> ses.uqd.ceis@joinville.sc.gov.br</li>
+          </ul>
+        </div>
+
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Relatório – Indicadores EPS</div>
+          <p>Visualize os indicadores de educação permanente em saúde.</p>
+          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório</a>
+        </div>
+      </div>
+
+      <!-- 🔹 LINHA 3 -->
+      <div class="linha">
+        <div class="quadro-item">
+          <div class="titulo-texto">3. Técnico de enfermagem</div>
+          <ul class="quadro-detalhes">
+            <li><strong>Nome:</strong> Estela Maria da Silva</li>
+            <li><strong>Ramal:</strong> 6664</li>
+            <li><strong>Email:</strong> ses.uqd.ceis@joinville.sc.gov.br</li>
+          </ul>
+        </div>
+
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Relatório – Capacitações</div>
+          <p>Acompanhe os dados das capacitações realizadas.</p>
+          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório</a>
+        </div>
+      </div>
+
+      <!-- 🔹 LINHA 4 -->
+      <div class="linha">
+        <div class="quadro-item">
+          <div class="titulo-texto">4. Técnico de enfermagem</div>
+          <ul class="quadro-detalhes">
+            <li><strong>Nome:</strong> Julio Cezar Dominoni</li>
+            <li><strong>Ramal:</strong> 6664</li>
+            <li><strong>Email:</strong> ses.uqd.ceis@joinville.sc.gov.br</li>
+          </ul>
+        </div>
+
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Relatório – Apoio Educacional</div>
+          <p>Consulte os dados de apoio educacional.</p>
+          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório</a>
+        </div>
+      </div>
+
+      <!-- 🔹 LINHA 5 -->
+      <div class="linha">
+        <div class="quadro-item">
+          <div class="titulo-texto">5. Estagiário de Nível Superior</div>
+          <ul class="quadro-detalhes">
+            <li><strong>Nome:</strong> Maria Eduarda Detroz Medeiros</li>
+            <li><strong>Ramal:</strong> 6664</li>
+            <li><strong>Email:</strong> ses.uqd.ceis@joinville.sc.gov.br</li>
+          </ul>
+        </div>
+
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Relatório – Estágio</div>
+          <p>Dados e acompanhamento dos estagiários.</p>
+          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    Secretaria Municipal da Saúde – Joinville
+  </footer>
+
+</body>
+</html>
