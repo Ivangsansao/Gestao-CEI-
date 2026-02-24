@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Título otimizado para SEO -->
-    <title>Gestão do Trabalho e Centro de Educação e Inovação em Saúde Maria Carola Keller</title>
+    <title>Gestão do Trabalho e Centro de Educação e Inovação em Saúde Maria Carola Keller.</title>
     
     <!-- Meta tags para SEO -->
     <meta name="description" content="Gestão do Trabalho e Centro de Educação e Inovação em Saúde Maria Carola Keller - Joinville/SC">
@@ -23,8 +23,8 @@
     <!-- Font Awesome para ícones profissionais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- VLIBRAS para acessibilidade -->
-    <link rel="stylesheet" href="https://vlibras.gov.br/app/vlibras.css">
+    <!-- NÃO USAR ESSA LINHA - será removida -->
+    <!-- <link rel="stylesheet" href="https://vlibras.gov.br/app/vlibras.css"> -->
     
     <style>
         /* ===== VARIÁVEIS GLOBAIS ===== */
@@ -840,14 +840,6 @@
     <!-- Link de acessibilidade - pular para conteúdo -->
     <a href="#conteudo-principal" class="skip-to-content">Pular para conteúdo principal</a>
 
-    <!-- VLIBRAS -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-
     <!-- HEADER -->
     <header class="header">
         <div class="header-container">
@@ -857,7 +849,7 @@
             </a>
             
             <div class="header-title">
-                Gestão do Trabalho<br>e Centro de Educação e Inovação em Saúde Maria Carola Keller
+                Gestão do Trabalho<br>e Centro de Educação e Inovação em Saúde Maria Carola Keller.
             </div>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
@@ -881,7 +873,7 @@
         <div class="hero-content">
             <h1 class="hero-title">
                 <span class="hero-title-main">Gestão do Trabalho</span>
-                <span class="hero-title-sub">e Centro de Educação e Inovação em Saúde Maria Carola Keller</span>
+                <span class="hero-title-sub">e Centro de Educação e Inovação em Saúde Maria Carola Keller.</span>
             </h1>
             <p class="hero-text">Fortalecemos a formação e qualificação dos trabalhadores do SUS em Joinville, integrando ensino, serviço e comunidade.</p>
             <div class="hero-buttons">
@@ -1092,16 +1084,16 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <img src="Logotipo_Prefeitura_horizontal_negativo (1).png" alt="Prefeitura de Joinville" class="footer-logo" onerror="this.src='https://via.placeholder.com/150x50?text=Prefeitura'">
-                    <p class="footer-text">Gestão do Trabalho e Centro de Educação e Inovação em Saúde Maria Carola Keller</p>
+                    <p class="footer-text">Gestão do Trabalho e Centro de Educação e Inovação em Saúde Maria Carola Keller.</p>
                 </div>
                 
                 <div class="footer-col">
                     <h4>Contato</h4>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i> Rua Iririú, 2475 - Iririú, Joinville/SC</li>
-                        <li><i class="fas fa-phone"></i> (47) 3425-0114</li>
-                        <li><i class="fas fa-envelope"></i> ses.uge.ceis@joinville.sc.gov.br</li>
-                        <li><i class="fas fa-clock"></i> Seg a Sex, 7h às 19h</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Iririú, 2475 - Iririú, Joinville/SC,</li>
+                        <li><i class="fas fa-phone"></i> (47) 3425-0114,</li>
+                        <li><i class="fas fa-envelope"></i> ses.uge.ceis@joinville.sc.gov.br,</li>
+                        <li><i class="fas fa-clock"></i> Seg a Sex, 7h às 19h exceto feriados e pontos facultativos.</li>
                     </ul>
                 </div>
                 
@@ -1111,7 +1103,7 @@
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#nucleos">Núcleos</a></li>
-                        <li><a href="organograma.html">Organograma</a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -1122,12 +1114,26 @@
         </div>
     </footer>
 
+    <!-- VLIBRAS - Widget de Acessibilidade (CORRIGIDO) -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
     <!-- Scripts -->
-    <script src="https://vlibras.gov.br/app/vlibras.js" defer></script>
+    <!-- Script do VLibras (CORRIGIDO) -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     
     <script>
         (function() {
             'use strict';
+
+            // Inicialização do VLibras (CORRIGIDO)
+            document.addEventListener('DOMContentLoaded', function() {
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+            });
 
             // Menu Mobile
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
