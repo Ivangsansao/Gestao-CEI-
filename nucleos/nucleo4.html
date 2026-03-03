@@ -57,9 +57,9 @@
       margin: 30px auto;
     }
 
-    .linha {
+    .linha-tres-quadros {
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
       gap: 20px;
       align-items: stretch;
     }
@@ -134,7 +134,7 @@
     }
 
     @media (max-width: 768px) {
-      .linha {
+      .linha-tres-quadros {
         grid-template-columns: 1fr;
       }
     }
@@ -163,8 +163,8 @@
   <main>
     <div class="layout-container">
 
-      <!-- 🔹 LINHA 1 -->
-      <div class="linha">
+      <!-- 🔹 LINHA 1 - Técnico de nível superior com dois relatórios ao lado -->
+      <div class="linha-tres-quadros">
         <div class="quadro-cargo">
           <div class="quadro-titulo">1. Técnico de nível superior:</div>
           <ul class="quadro-detalhes">
@@ -175,7 +175,16 @@
         </div>
 
         <div class="quadro-link">
-          <div class="quadro-titulo">📊 Relatório</div>
+          <div class="quadro-titulo">📊 Relatório.</div>
+          <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
+             target="_blank"
+             class="relatorio-link">
+            Acessar
+          </a>
+        </div>
+
+        <div class="quadro-link">
+          <div class="quadro-titulo">📊 Relatório.</div>
           <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
              target="_blank"
              class="relatorio-link">
@@ -184,19 +193,28 @@
         </div>
       </div>
 
-      <!-- 🔹 LINHA 2 -->
-      <div class="linha">
+      <!-- 🔹 LINHA 2 - Técnico em Enfermagem com dois relatórios ao lado -->
+      <div class="linha-tres-quadros">
         <div class="quadro-cargo">
           <div class="quadro-titulo">2. Técnico em Enfermagem:</div>
           <ul class="quadro-detalhes">
-            <li><strong>Nome:</strong> Alessandra Fabeni de Medeiros,</li>
+            <li><strong>Nome:</strong> Alexsandra Fabeni de Medeiros,</li>
             <li><strong>Ramal:</strong> 6665,</li>
             <li><strong>E-mail:</strong> ses.uqd.ceis.aps@joinville.sc.gov.br.</li>
           </ul>
         </div>
 
         <div class="quadro-link">
-          <div class="quadro-titulo">📊 Relatório</div>
+          <div class="quadro-titulo">📊 Relatório.</div>
+          <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
+             target="_blank"
+             class="relatorio-link">
+            Acessar
+          </a>
+        </div>
+
+        <div class="quadro-link">
+          <div class="quadro-titulo">📊 Relatório.</div>
           <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
              target="_blank"
              class="relatorio-link">
@@ -205,8 +223,8 @@
         </div>
       </div>
 
-      <!-- 🔹 LINHA 3 -->
-      <div class="linha">
+      <!-- 🔹 LINHA 3 - Estagiário de nível superior com dois relatórios ao lado -->
+      <div class="linha-tres-quadros">
         <div class="quadro-cargo">
           <div class="quadro-titulo">3. Estagiário de nível superior:</div>
           <ul class="quadro-detalhes">
@@ -216,12 +234,6 @@
           </ul>
         </div>
 
-        <div class="quadro-link">
-          <div class="quadro-titulo">📊 Relatório</div>
-          <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
-             target="_blank"
-             class="relatorio-link">
-            Acessar
           </a>
         </div>
       </div>
@@ -234,5 +246,4 @@
   </footer>
 
 </body>
-
 </html>

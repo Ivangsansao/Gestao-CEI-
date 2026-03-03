@@ -53,13 +53,14 @@
       flex-direction: column;
       gap: 20px;
       width: 90%;
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 30px auto;
     }
 
+    /* TRÊS COLUNAS IGUAIS */
     .linha {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
       align-items: stretch;
     }
@@ -110,6 +111,11 @@
       text-align: center;
       margin-top: 10px;
       background-color: #0dcaf0;
+      transition: background-color 0.3s ease;
+    }
+
+    .relatorio-link:hover {
+      background-color: #0bacd0;
     }
 
     footer {
@@ -119,6 +125,12 @@
       color: white;
       margin-top: 40px;
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 1024px) {
+      .linha {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     @media (max-width: 768px) {
@@ -151,8 +163,9 @@
   <main>
     <div class="layout-container">
 
-      <!-- 🔹 LINHA 1 -->
+      <!-- 🔹 LINHA 1 - 3 COLUNAS -->
       <div class="linha">
+        <!-- Card 1: Técnico de nível superior (original) -->
         <div class="quadro-item">
           <div class="titulo-texto">1. Técnico de nível superior:</div>
           <ul class="quadro-detalhes">
@@ -162,19 +175,32 @@
           </ul>
         </div>
 
+        <!-- Card 2: Relatório Online (original) -->
         <div class="quadro-item quadro-relatorio">
-          <div class="titulo-texto">Relatório Online</div>
+          <div class="titulo-texto">Relatório – Cursos de Vacina.</div>
+          <p>Acesse o relatório completo com dados atualizados sobre a educação permanente em saúde.</p>
+          <a href="https://lookerstudio.google.com/reporting/438ee60f-1366-4607-a507-f0072889edc1/page/SRpeD"
+             target="_blank"
+             class="relatorio-link">
+            Acessar Relatório.
+          </a>
+        </div>
+
+        <!-- Card 3: Relatório Online (nova coluna - cópia do padrão) -->
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Informações Online.</div>
           <p>Acesse o relatório completo com dados atualizados sobre a educação permanente em saúde.</p>
           <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
              target="_blank"
              class="relatorio-link">
-            Acessar Relatório
+            Acessar Relatório.
           </a>
         </div>
       </div>
 
-      <!-- 🔹 LINHA 2 -->
+      <!-- 🔹 LINHA 2 - 3 COLUNAS -->
       <div class="linha">
+        <!-- Card 1: Técnico de nível superior (original) -->
         <div class="quadro-item">
           <div class="titulo-texto">2. Técnico de nível superior:</div>
           <ul class="quadro-detalhes">
@@ -184,15 +210,28 @@
           </ul>
         </div>
 
+        <!-- Card 2: Relatório – Indicadores EPS (original) -->
         <div class="quadro-item quadro-relatorio">
-          <div class="titulo-texto">Relatório – Indicadores EPS</div>
+          <div class="titulo-texto">Relatório – Indicadores EPS.</div>
           <p>Visualize os indicadores de educação permanente em saúde.</p>
-          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório</a>
+          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório.</a>
+        </div>
+
+        <!-- Card 3: Relatório Online (nova coluna - cópia do padrão) -->
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Informações Online.</div>
+          <p>Acesse o relatório completo com dados atualizados sobre a educação permanente em saúde.</p>
+          <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
+             target="_blank"
+             class="relatorio-link">
+            Acessar Relatório.
+          </a>
         </div>
       </div>
 
-      <!-- 🔹 LINHA 3 -->
+      <!-- 🔹 LINHA 3 - 3 COLUNAS -->
       <div class="linha">
+        <!-- Card 1: Técnico de enfermagem (original) -->
         <div class="quadro-item">
           <div class="titulo-texto">3. Técnico de enfermagem:</div>
           <ul class="quadro-detalhes">
@@ -202,15 +241,28 @@
           </ul>
         </div>
 
+        <!-- Card 2: Relatório – Capacitações (original) -->
         <div class="quadro-item quadro-relatorio">
           <div class="titulo-texto">Relatório – Capacitações</div>
           <p>Acompanhe os dados das capacitações realizadas.</p>
-          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório</a>
+          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório.</a>
+        </div>
+
+        <!-- Card 3: Relatório Online (nova coluna - cópia do padrão) -->
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Informações Online.</div>
+          <p>Acesse o relatório completo com dados atualizados sobre a educação permanente em saúde.</p>
+          <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
+             target="_blank"
+             class="relatorio-link">
+            Acessar Relatório.
+          </a>
         </div>
       </div>
 
-      <!-- 🔹 LINHA 4 -->
+      <!-- 🔹 LINHA 4 - 3 COLUNAS -->
       <div class="linha">
+        <!-- Card 1: Técnico de enfermagem (original) -->
         <div class="quadro-item">
           <div class="titulo-texto">4. Técnico de enfermagem:</div>
           <ul class="quadro-detalhes">
@@ -220,17 +272,30 @@
           </ul>
         </div>
 
+        <!-- Card 2: Relatório – Apoio Educacional (original) -->
         <div class="quadro-item quadro-relatorio">
-          <div class="titulo-texto">Relatório – Apoio Educacional</div>
+          <div class="titulo-texto">Relatório – Apoio Educacional.</div>
           <p>Consulte os dados de apoio educacional.</p>
-          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório</a>
+          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório.</a>
+        </div>
+
+        <!-- Card 3: Relatório Online (nova coluna - cópia do padrão) -->
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Informações Online.</div>
+          <p>Acesse o relatório completo com dados atualizados sobre a educação permanente em saúde.</p>
+          <a href="https://lookerstudio.google.com/reporting/b2dc11e3-4d1b-4910-a54c-7579857bc2dd/page/WSVmF"
+             target="_blank"
+             class="relatorio-link">
+            Acessar Relatório.
+          </a>
         </div>
       </div>
 
-      <!-- 🔹 LINHA 5 -->
+      <!-- 🔹 LINHA 5 - 3 COLUNAS -->
       <div class="linha">
+        <!-- Card 1: Estagiário de nível Superior (original) -->
         <div class="quadro-item">
-          <div class="titulo-texto">5. Estagiário de Nível Superior:</div>
+          <div class="titulo-texto">5. Estagiário de nível Superior:</div>
           <ul class="quadro-detalhes">
             <li><strong>Nome:</strong> Maria Eduarda Detroz Medeiros,</li>
             <li><strong>Ramal:</strong> 6664,</li>
@@ -238,10 +303,8 @@
           </ul>
         </div>
 
-        <div class="quadro-item quadro-relatorio">
-          <div class="titulo-texto">Relatório – Estágio</div>
-          <p>Dados e acompanhamento dos estagiários.</p>
-          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório</a>
+
+          </a>
         </div>
       </div>
 
@@ -253,5 +316,4 @@
   </footer>
 
 </body>
-
 </html>

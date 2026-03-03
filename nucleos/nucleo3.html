@@ -53,13 +53,14 @@
       flex-direction: column;
       gap: 20px;
       width: 90%;
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 30px auto;
     }
 
+    /* TRÊS COLUNAS IGUAIS */
     .linha {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
       align-items: stretch;
     }
@@ -110,6 +111,11 @@
       text-align: center;
       margin-top: 10px;
       background-color: #0dcaf0;
+      transition: background-color 0.3s ease;
+    }
+
+    .relatorio-link:hover {
+      background-color: #0bacd0;
     }
 
     footer {
@@ -119,6 +125,12 @@
       color: white;
       margin-top: 40px;
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 1024px) {
+      .linha {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     @media (max-width: 768px) {
@@ -151,30 +163,44 @@
   <main>
     <div class="layout-container">
 
-      <!-- 🔹 LINHA 1 -->
+      <!-- 🔹 LINHA 1 - 3 COLUNAS -->
       <div class="linha">
+        <!-- Card 1: Técnico de nível superior (original) -->
         <div class="quadro-item">
           <div class="titulo-texto">1. Técnico de nível superior:</div>
           <ul class="quadro-detalhes">
-            <li><strong>Nome:</strong> Rosemari Aparecida Maciel,</li>
+            <li><strong>Nome:</strong> Rosemeri Aparecida Maciel,</li>
             <li><strong>Ramal:</strong> 6664,</li>
             <li><strong>E-mail:</strong> ses.uqd.ceis.aps@joinville.sc.gov.br.</li>
           </ul>
         </div>
 
+        <!-- Card 2: Relatório – (original) -->
         <div class="quadro-item quadro-relatorio">
-          <div class="titulo-texto">Relatório – Cursos de Vacina</div>
-          <p>Acesse o relatório completo com dados atualizados sobre a educação permanente em saúde.</p>
-          <a href="https://lookerstudio.google.com/reporting/438ee60f-1366-4607-a507-f0072889edc1/page/SRpeD"
+          <div class="titulo-texto">Pedido de Liberação de ponto.</div>
+          <p>Acesse o pedido de liberação do ponto para qualificação dos profissionais do CEIS.</p>
+          <a href="https://lookerstudio.google.com/u/0/reporting/8b375f4f-bbe8-4610-9f59-8faaf71cdb51/page/SRpeD"
              target="_blank"
              class="relatorio-link">
-            Acessar Relatório
+            Solicitar Liberação
+          </a>
+        </div>
+
+        <!-- Card 3: Relatório – (nova coluna - cópia do padrão) -->
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Banco de dados de solicitação de Ponto.</div>
+          <p>Acesse a planilha de Banco de dados de solicitação de Ponto.</p>
+          <a href="#"
+             target="_blank"
+             class="relatorio-link">
+            Acessar formulário
           </a>
         </div>
       </div>
 
-      <!-- 🔹 LINHA 2 -->
+      <!-- 🔹 LINHA 2 - 3 COLUNAS -->
       <div class="linha">
+        <!-- Card 1: Agente Administrativo (original) -->
         <div class="quadro-item">
           <div class="titulo-texto">2. Agente Administrativo:</div>
           <ul class="quadro-detalhes">
@@ -184,15 +210,28 @@
           </ul>
         </div>
 
+        <!-- Card 2: Relatório – Indicadores Administrativos (original) -->
         <div class="quadro-item quadro-relatorio">
-          <div class="titulo-texto">Relatório – Indicadores Administrativos</div>
-          <p>Visualize os dados administrativos e indicadores de acompanhamento.</p>
-          <a href="#" target="_blank" class="relatorio-link">Acessar Relatório</a>
+          <div class="titulo-texto">Calendário da Saúde.</div>
+          <p>Acesse o calendário completo com as datas e eventos da saúde.</p>
+          <a href="https://drive.google.com/file/d/1tY-vol-PZ11-kREl-XYsnY_xChwoHGoA/view?usp=drive_link" target="_blank" class="relatorio-link">Acessar Relatório.</a>
+        </div>
+
+        <!-- Card 3: Relatório – (nova coluna - cópia do padrão) -->
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Relatório de Atividades na Saúde.</div>
+          <p>Acesse o registro das atividades realizadas na saúde.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSexY605fb5d7XZt8G9TO-3SP51G9fNmyEeiwu4Wfn2CRVH3Sw/viewform"
+             target="_blank"
+             class="relatorio-link">
+            Acessar formulário
+          </a>
         </div>
       </div>
 
-      <!-- 🔹 LINHA 3 -->
+      <!-- 🔹 LINHA 3 - 3 COLUNAS -->
       <div class="linha">
+        <!-- Card 1: Agente Administrativo (original) -->
         <div class="quadro-item">
           <div class="titulo-texto">3. Agente Administrativo:</div>
           <ul class="quadro-detalhes">
@@ -202,10 +241,22 @@
           </ul>
         </div>
 
+        <!-- Card 2: Relatório – Apoio Operacional (original) -->
         <div class="quadro-item quadro-relatorio">
-          <div class="titulo-texto">Relatório – Apoio Operacional</div>
-          <p>Acesse os relatórios relacionados ao apoio operacional.</p>
+          <div class="titulo-texto">Prêmio de Práticas inovadoras.</div>
+          <p>Acesse o relatórios de premio de Práticas inovadoras.</p>
           <a href="#" target="_blank" class="relatorio-link">Acessar Relatório</a>
+        </div>
+
+        <!-- Card 3: Relatório – (nova coluna - cópia do padrão) -->
+        <div class="quadro-item quadro-relatorio">
+          <div class="titulo-texto">Relatório de evento ciêntifico .</div>
+          <p>Acesse o relatório de evento ciêntifico.</p>
+          <a href="#"
+             target="_blank"
+             class="relatorio-link">
+            Acessar Relatório
+          </a>
         </div>
       </div>
 
@@ -217,6 +268,4 @@
   </footer>
 
 </body>
-
 </html>
-
